@@ -2,6 +2,14 @@
       <div class="container">
         <%= link_to "KORDA.IO", root_path, id: "logo" %>
         <nav>
+          <ul class="nav navbar-nav navbar-middle">
+            <li><%= link_to "Computing",   computing_path %></li>
+            <li><%= link_to "Finance",   finance_path %></li>
+            <li><%= link_to "Philosophy",   philosophy_path %></li>
+            <li><%= link_to "Lifestyle",   lifestyle_path %></li>
+            <li><%= link_to "Politics",   politics_path %></li>
+          </ul>
+          
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   root_path %></li>
             <li><%= link_to "Help",   help_path %></li>

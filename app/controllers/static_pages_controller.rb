@@ -13,4 +13,15 @@ class StaticPagesController < ApplicationController
   
   def team
   end
+  
+  def computing
+  end
+  def politics
+  end
+  def finance
+  end
+  def lifestyle
+  end
+  def philosophy
+  end
 end

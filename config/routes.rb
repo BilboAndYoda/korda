@@ -8,6 +8,12 @@ Rails.application.routes.draw do
  get '/contact', to: 'static_pages#contact'
  get '/signup', to: 'users#new'
  get '/team', to: 'static_pages#team'
+ 
+ get '/computing', to: 'static_pages#computing'
+ get '/finance', to: 'static_pages#finance'
+ get '/philosophy', to: 'static_pages#philosophy'
+ get '/lifestyle', to: 'static_pages#lifestyle'
+ get '/politics', to: 'static_pages#politics'
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
