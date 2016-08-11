@@ -2,7 +2,7 @@ module ApplicationHelper
   
   #Returns the full title on a per-page basis.
   def full_title(page_title = ' ')
-    base_title = "Korda.io Base Title"
+    base_title = "Korda.io"
     if page_title.empty?
       base_title
     else
