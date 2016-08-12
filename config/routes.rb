@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
  root 'static_pages#home'
  get '/help', to: 'static_pages#help'
  get '/about', to: 'static_pages#about'
  get '/contact', to: 'static_pages#contact'
  get '/signup', to: 'users#new'
+ post '/signup',  to: 'users#create'
  get '/team', to: 'static_pages#team'
+ resources :users
  
  get '/computing', to: 'static_pages#computing'
  get '/finance', to: 'static_pages#finance'
