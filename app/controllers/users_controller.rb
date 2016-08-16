@@ -11,9 +11,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to the Korda!"
-      redirect_to @user
+      # Tell the UserMailer to send a welcome email after save
+      UserMailer.welcome_email(@user).deliver_later
+ 
+      format.html { redirect_to(@user, notice: 'User was successfully created.') }
+      format.json { render json: @user, status: :created, location: @user }
     else
-      render 'new'
+      format.html { render action: 'new' }
+      format.json { render json: @user.errors, status: :unprocessable_entity }
     end
   end
   
